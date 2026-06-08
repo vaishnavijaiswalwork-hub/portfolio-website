@@ -1,253 +1,377 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta name="author" content="vaishnavi jaiswal">
-    <title> Vaishnavi Jiaswal Portfolio website</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome Icons -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Vaishnavi Jaiswal">
+    <meta name="description" content="Vaishnavi Jaiswal — AI / Prompt Engineer & UI/UX Designer portfolio">
+    <title>Vaishnavi Jaiswal | AI &amp; Prompt Engineer · UI/UX Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- HEADER SECTION -->
-    <div id="header">
-        <div class="container">
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a href="#header" class="logo-link">
+                <img src="logo4.png" class="logo" alt="VJ logo">
+                <span>Vaishnavi<em>.</em></span>
+            </a>
+
             <nav>
-                <img src="logo4.png" class="logo">
-                <ul>
-                    <li><a href="#header">Home</a></li>
+                <ul id="navMenu">
+                    <li><a href="#header" class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#portfolio">Work</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
 
-            <div class="header-text">
-                <p>AI / Prompt Engineer &amp; UI/UX Designer</p>
-                <h1>Hi, I am <span>Vaishnavi</span><br>Jaiswal from India</h1>
+            <a href="VAISHNAVI-resume-2026.pdf" download class="btn btn-outline nav-cta">
+                <i class="fa-solid fa-download"></i> Resume
+            </a>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO / HEADER SECTION -->
+    <section id="header">
+        <div class="bg-glow glow-1"></div>
+        <div class="bg-glow glow-2"></div>
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <p class="eyebrow"><span class="dot"></span> AI / Prompt Engineer &amp; UI/UX Designer</p>
+                <h1>Hi, I'm <span class="gradient-text">Vaishnavi Jaiswal</span><br>I build intelligent AI systems &amp; beautiful interfaces.</h1>
+                <p class="hero-sub">
+                    From RAG pipelines and autonomous agents to pixel-perfect UI/UX —
+                    I design and ship products that feel as good as they think. Currently embedded
+                    as a forward-deployed engineer on <strong>PressHop</strong>, working at the
+                    intersection of AI, design, and real-world product delivery.
+                </p>
+                <div class="hero-actions">
+                    <a href="#portfolio" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> View My Work</a>
+                    <a href="#contact" class="btn btn-outline"><i class="fa-solid fa-paper-plane"></i> Let's Talk</a>
+                </div>
+                <div class="hero-stats">
+                    <div><strong>6+</strong><span>AI &amp; Design Projects</span></div>
+                    <div><strong>55K+</strong><span>Users on shipped products</span></div>
+                    <div><strong>2</strong><span>Domains mastered</span></div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="orbit-card card-main">
+                    <img src="image.jpeg" alt="Vaishnavi Jaiswal">
+                </div>
+                <div class="floating-chip chip-1"><i class="fa-solid fa-robot"></i> Building AI Agents</div>
+                <div class="floating-chip chip-2"><i class="fa-brands fa-figma"></i> Designing in Figma</div>
+                <div class="floating-chip chip-3"><i class="fa-solid fa-database"></i> RAG · Vector DBs</div>
             </div>
         </div>
-    </div>
+        <a href="#about" class="scroll-cue"><i class="fa-solid fa-chevron-down"></i></a>
+    </section>
 
     <!-- ABOUT SECTION -->
-    <div class="about">
+    <section class="about" id="about">
         <div class="container">
-            <div class="row">
+            <p class="section-tag">About Me</p>
+            <h2 class="sub-title">Where AI engineering meets thoughtful design</h2>
+
+            <div class="row about-row">
                 <div class="about-col-1">
-                    <img src="image.jpeg" class="my-image">
+                    <div class="about-img-frame">
+                        <img src="image.jpeg" class="my-image" alt="Vaishnavi Jaiswal portrait">
+                    </div>
                 </div>
 
                 <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>
-                        I'm a developer and designer who builds practical AI applications —
-                        RAG pipelines, autonomous agents, and conversational systems with
-                        persistent memory — and pairs them with clean, user-centered UI/UX
-                        and brand design. I've worked as an embedded forward-deployed engineer
-                        on a live product (PressHop), bridging client needs with both design
-                        and technical execution. Currently pursuing my B.Tech in Computer Science.
+                    <p class="about-bio">
+                        I'm a developer and designer who builds practical AI applications — RAG pipelines,
+                        autonomous agents, and conversational systems with persistent memory — and pairs
+                        them with clean, user-centered UI/UX and brand design. I've worked as an embedded
+                        forward-deployed engineer on a live product (PressHop), bridging client needs with
+                        both design and technical execution. Currently pursuing my B.Tech in Computer Science
+                        at Uttranchal University, Dehradun.
                     </p>
 
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
-                        <p class="tab-links" onclick="openTab('education')">Education</p>
+                        <p class="tab-links active-link" onclick="openTab(event,'skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab(event,'education')">Education</p>
                     </div>
 
                     <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>AI / Prompt Engineering</span> — OpenAI &amp; Gemini APIs, Ollama, RAG (Qdrant), LangGraph/LangChain, FastAPI, agent &amp; memory systems (mem0, Neo4j, MongoDB)</li>
-                            <li><span>Programming</span> — Python, HTML, CSS &amp; JavaScript (React basics), C basics</li>
-                            <li><span>Design</span> — Figma, Canva, Photoshop, branding, typography &amp; color theory</li>
-                        </ul>
+                        <div class="skill-block">
+                            <h4><i class="fa-solid fa-brain"></i> AI / Prompt Engineering</h4>
+                            <div class="pill-row">
+                                <span class="pill">OpenAI &amp; Gemini APIs</span>
+                                <span class="pill">Ollama (local LLMs)</span>
+                                <span class="pill">RAG · Qdrant</span>
+                                <span class="pill">LangGraph / LangChain</span>
+                                <span class="pill">FastAPI</span>
+                                <span class="pill">mem0 · Neo4j · MongoDB</span>
+                            </div>
+                        </div>
+                        <div class="skill-block">
+                            <h4><i class="fa-solid fa-code"></i> Programming</h4>
+                            <div class="pill-row">
+                                <span class="pill">Python</span>
+                                <span class="pill">HTML / CSS / JS</span>
+                                <span class="pill">React (basics)</span>
+                                <span class="pill">C (basics)</span>
+                            </div>
+                        </div>
+                        <div class="skill-block">
+                            <h4><i class="fa-solid fa-palette"></i> Design</h4>
+                            <div class="pill-row">
+                                <span class="pill">Figma</span>
+                                <span class="pill">Canva</span>
+                                <span class="pill">Photoshop</span>
+                                <span class="pill">Branding &amp; Typography</span>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>2026-29</span><br>B.Tech, Computer Science - Uttranchal University, Dehradun</li>
-                            <li><span>2024-25</span><br>Class 12 - Lucknow Public School (81.2%)</li>
-                            <li><span>2022-23</span><br>Class 10 - Lucknow Public School (87.8%)</li>
+                        <ul class="timeline-list">
+                            <li><span class="timeline-year">2026 – 29</span><div><strong>B.Tech, Computer Science</strong><br>Uttranchal University, Dehradun</div></li>
+                            <li><span class="timeline-year">2024 – 25</span><div><strong>Class 12 (Science)</strong><br>Lucknow Public School · 81.2%</div></li>
+                            <li><span class="timeline-year">2022 – 23</span><div><strong>Class 10</strong><br>Lucknow Public School · 87.8%</div></li>
                         </ul>
                     </div>
-
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- PORTFOLIO SECTION -->
-    <div id="portfolio">
+    <section id="portfolio">
         <div class="container">
-            <h1 class="sub-title">My Work</h1>
+            <p class="section-tag">Portfolio</p>
+            <h2 class="sub-title">Selected work — AI systems &amp; design</h2>
+            <p class="section-intro">A mix of production AI experiments and UI/UX case studies — each link opens the live repo or project.</p>
+
             <div class="work-list">
-                <div class="work">
+                <article class="work">
                     <div class="work-visual visual-rag"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
-                    <div class="layer">
+                    <div class="work-body">
+                        <span class="work-tag">AI Engineering</span>
                         <h3>RAG Document Q&amp;A Pipeline</h3>
-                        <p>Built a retrieval-augmented generation pipeline that ingests PDFs,
-                            chunks them, generates OpenAI embeddings, and stores/retrieves them
-                            via a Qdrant vector database to answer questions grounded in document content.
-                            <br><em>Python · LangChain · OpenAI · Qdrant</em></p>
-                        <a href="https://github.com/vaishnavijaiswalwork-hub/genai-projects" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <p>Ingests PDFs, chunks them, generates OpenAI embeddings, and retrieves grounded answers via a Qdrant vector database.</p>
+                        <div class="pill-row small">
+                            <span class="pill">Python</span><span class="pill">LangChain</span><span class="pill">OpenAI</span><span class="pill">Qdrant</span>
+                        </div>
+                        <a href="https://github.com/vaishnavijaiswalwork-hub/genai-projects" target="_blank" class="work-link">View on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
-                </div>
-                <div class="work">
+                </article>
+
+                <article class="work">
                     <div class="work-visual visual-agent"><i class="fa-solid fa-robot"></i></div>
-                    <div class="layer">
+                    <div class="work-body">
+                        <span class="work-tag">AI Engineering</span>
                         <h3>Tool-Calling AI Agent</h3>
-                        <p>Designed an agent that follows a start → plan → action → observe loop —
-                            selecting and executing tools (live weather, calculations) and returning
-                            grounded answers with strict structured JSON output.
-                            <br><em>Python · OpenAI · Pydantic</em></p>
-                        <a href="https://github.com/vaishnavijaiswalwork-hub/genai-projects" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <p>An agent that follows a start → plan → action → observe loop, selecting and executing tools with strict structured JSON output.</p>
+                        <div class="pill-row small">
+                            <span class="pill">Python</span><span class="pill">OpenAI</span><span class="pill">Pydantic</span>
+                        </div>
+                        <a href="https://github.com/vaishnavijaiswalwork-hub/genai-projects" target="_blank" class="work-link">View on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
-                </div>
-                <div class="work">
+                </article>
+
+                <article class="work">
                     <div class="work-visual visual-memory"><i class="fa-solid fa-brain"></i></div>
-                    <div class="layer">
+                    <div class="work-body">
+                        <span class="work-tag">AI Engineering</span>
                         <h3>Memory-Aware Chatbot</h3>
-                        <p>Built a conversational assistant that remembers facts across sessions
-                            using mem0 for memory, Neo4j as a graph store, and Qdrant for vector
-                            search — enabling personalized, context-aware replies.
-                            <br><em>mem0 · Neo4j · Qdrant · OpenAI</em></p>
-                        <a href="https://github.com/vaishnavijaiswalwork-hub/genai-projects" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <p>Remembers facts across sessions using mem0 for memory, Neo4j as a graph store, and Qdrant for vector search — personalized, context-aware replies.</p>
+                        <div class="pill-row small">
+                            <span class="pill">mem0</span><span class="pill">Neo4j</span><span class="pill">Qdrant</span><span class="pill">OpenAI</span>
+                        </div>
+                        <a href="https://github.com/vaishnavijaiswalwork-hub/genai-projects" target="_blank" class="work-link">View on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
-                </div>
-                <div class="work">
+                </article>
+
+                <article class="work">
                     <div class="work-visual visual-graph"><i class="fa-solid fa-diagram-project"></i></div>
-                    <div class="layer">
+                    <div class="work-body">
+                        <span class="work-tag">AI Engineering</span>
                         <h3>Stateful Chatbot with LangGraph</h3>
-                        <p>Built graph-based conversational agents with query-routing logic
-                            (structured outputs classify coding vs. general questions) and
-                            persistent conversation state via MongoDB checkpointing.
-                            <br><em>LangGraph · LangChain · MongoDB</em></p>
-                        <a href="https://github.com/vaishnavijaiswalwork-hub/langgraph-chatbot" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <p>Graph-based conversational agent with query-routing logic and persistent conversation state via MongoDB checkpointing.</p>
+                        <div class="pill-row small">
+                            <span class="pill">LangGraph</span><span class="pill">LangChain</span><span class="pill">MongoDB</span>
+                        </div>
+                        <a href="https://github.com/vaishnavijaiswalwork-hub/langgraph-chatbot" target="_blank" class="work-link">View on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
-                </div>
-                <div class="work">
+                </article>
+
+                <article class="work">
                     <div class="work-visual visual-dashboard"><i class="fa-solid fa-chalkboard-user"></i></div>
-                    <div class="layer">
+                    <div class="work-body">
+                        <span class="work-tag">UI/UX Design</span>
                         <h3>ITBD University — Dashboard UI/UX</h3>
-                        <p>Designed a full learning-platform dashboard: sidebar navigation,
-                            course cards, progress tracking, leaderboard, and an embedded
-                            AI chat assistant widget — focused on clarity and a friendly visual style.
-                            <br><em>Figma · UI/UX Design</em></p>
-                        <a href="https://github.com/vaishnavijaiswalwork-hub/Assignment" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <p>A full learning-platform dashboard: sidebar navigation, course cards, progress tracking, leaderboard, and an embedded AI chat widget.</p>
+                        <div class="pill-row small">
+                            <span class="pill">Figma</span><span class="pill">UI/UX Design</span>
+                        </div>
+                        <a href="https://github.com/vaishnavijaiswalwork-hub/Assignment" target="_blank" class="work-link">View on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
-                </div>
-                <div class="work">
-                    <img src="presshop-preview.png">
-                    <div class="layer">
+                </article>
+
+                <article class="work">
+                    <div class="work-visual visual-presshop">
+                        <img src="presshop-preview.png" alt="PressHop app preview">
+                    </div>
+                    <div class="work-body">
+                        <span class="work-tag">FDE · Design</span>
                         <h3>PressHop — Forward Deployed Engineering</h3>
-                        <p>Worked as an embedded UI/UX designer &amp; forward deployed engineer
-                            on PressHop (a people-powered news platform, 55K+ users) — gathering
-                            requirements, designing visual assets, and bridging design-to-dev handoff.
-                            <br><em>Figma · Canva · Difmo Pvt. Ltd.</em></p>
-                        <a href="https://www.presshop.com/" target="_blank"><i class="fa-solid fa-link"></i></a>
+                        <p>Embedded UI/UX designer &amp; forward deployed engineer on PressHop (55K+ users) — gathered requirements, designed visual assets, bridged design-to-dev handoff.</p>
+                        <div class="pill-row small">
+                            <span class="pill">Figma</span><span class="pill">Canva</span><span class="pill">Difmo Pvt. Ltd.</span>
+                        </div>
+                        <a href="https://www.presshop.com/" target="_blank" class="work-link">Visit PressHop <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
-                </div>
+                </article>
             </div>
-            <a href="https://github.com/vaishnavijaiswalwork-hub" target="_blank" class="btn">See More on GitHub</a>
+
+            <a href="https://github.com/vaishnavijaiswalwork-hub" target="_blank" class="btn btn-primary see-more-btn"><i class="fa-brands fa-github"></i> See more on GitHub</a>
         </div>
-    </div>
+    </section>
 
     <!-- EXPERIENCE SECTION -->
-    <div id="experience">
+    <section id="experience">
         <div class="container">
-            <h1 class="sub-title">Experience</h1>
-            <div class="experience-item">
-                <h3>UI/UX Designer &amp; Forward Deployed Engineer — Difmo Pvt. Ltd. <span>(PressHop project)</span></h3>
-                <p class="experience-date">February 2026 – March 2026</p>
-                <ul>
-                    <li>Embedded, client-facing role on PressHop — a people-powered news content platform (55K+ users across the UK, USA &amp; India) — bridging the client's product needs with design and technical execution.</li>
-                    <li>Gathered requirements directly from the client/product team and translated them into design specs and technical tasks through continuous feedback loops.</li>
-                    <li>Configured, integrated, and supported the product on the ground — hands-on technical troubleshooting, bug triage, and build testing.</li>
-                    <li>Bridged design-to-dev handoff, working with developers to ship Figma/Canva designs faithfully into the live product.</li>
-                    <li>Designed supporting visual assets — app screens, onboarding/marketing creatives, and branding elements.</li>
-                </ul>
+            <p class="section-tag">Experience</p>
+            <h2 class="sub-title">On-the-ground impact</h2>
+
+            <div class="timeline">
+                <div class="timeline-node">
+                    <div class="timeline-dot"><i class="fa-solid fa-briefcase"></i></div>
+                    <div class="timeline-card">
+                        <div class="timeline-card-head">
+                            <h3>UI/UX Designer &amp; Forward Deployed Engineer</h3>
+                            <span class="timeline-date">Feb 2026 – Mar 2026</span>
+                        </div>
+                        <p class="timeline-company">Difmo Pvt. Ltd. · <em>PressHop project</em></p>
+                        <ul>
+                            <li>Embedded, client-facing role on <strong>PressHop</strong> — a people-powered news content platform (55K+ users across the UK, USA &amp; India) — bridging the client's product needs with design and technical execution.</li>
+                            <li>Gathered requirements directly from the client/product team and translated them into design specs and technical tasks through continuous feedback loops.</li>
+                            <li>Configured, integrated, and supported the product on the ground — hands-on technical troubleshooting, bug triage, and build testing.</li>
+                            <li>Bridged design-to-dev handoff, working with developers to ship Figma/Canva designs faithfully into the live product.</li>
+                            <li>Designed supporting visual assets — app screens, onboarding/marketing creatives, and branding elements.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- CONTACT SECTION -->
-    <div id="contact">
+    <section id="contact">
         <div class="container">
-            <div class="row">
+            <p class="section-tag">Contact</p>
+            <h2 class="sub-title">Let's build something great together</h2>
 
+            <div class="row contact-row">
                 <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fas fa-envelope"></i> vaishnavijaiswal.work@gmail.com</p>
-                    <p><i class="fas fa-phone"></i>+91 8353945347</p>
+                    <p class="contact-lead">Got an AI product to ship, or an interface that needs a design refresh? I'm open to freelance work, collaborations, and full-time roles.</p>
+
+                    <a class="contact-line" href="mailto:vaishnavijaiswal.work@gmail.com"><i class="fa-solid fa-envelope"></i> vaishnavijaiswal.work@gmail.com</a>
+                    <a class="contact-line" href="tel:+918353945347"><i class="fa-solid fa-phone"></i> +91 8353945347</a>
+                    <span class="contact-line"><i class="fa-solid fa-location-dot"></i> Lucknow, India</span>
+
                     <div class="social-icons">
-                        <a href="https://github.com/vaishnavijaiswalwork-hub" target="_blank"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/vaishnavi-jaiswal-98956b3a7" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/vaishnavij266" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/vaishnavijaiswalwork-hub" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/vaishnavi-jaiswal-98956b3a7" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/vaishnavij266" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                     </div>
-                    <a href="VAISHNAVI-resume.pdf" download class="btn btn2">Download CV</a>
+                    <a href="VAISHNAVI-resume-2026.pdf" download class="btn btn-outline"><i class="fa-solid fa-download"></i> Download Resume</a>
                 </div>
 
                 <div class="contact-right">
                     <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
+                        <textarea name="Message" rows="5" placeholder="Tell me about your project..."></textarea>
+                        <button type="submit" class="btn btn-primary full-width">Send Message <i class="fa-solid fa-paper-plane"></i></button>
                     </form>
                     <span id="msg"></span>
                 </div>
-
             </div>
         </div>
 
         <div class="copyright">
-            <p>© Vaishnavi Jaiswal</p>
+            <p>© <span id="year"></span> Vaishnavi Jaiswal — Designed &amp; built with care.</p>
         </div>
-    </div>
+    </section>
 
     <script>
+        // Tabs
         let tabLinks = document.getElementsByClassName("tab-links");
         let tabContents = document.getElementsByClassName("tab-contents");
 
-        function openTab(tabName) {
-            for (let tabLink of tabLinks) {
-                tabLink.classList.remove("active-link");
-            }
-            for (let tabContent of tabContents) {
-                tabContent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
+        function openTab(evt, tabName) {
+            for (let tabLink of tabLinks) tabLink.classList.remove("active-link");
+            for (let tabContent of tabContents) tabContent.classList.remove("active-tab");
+            evt.currentTarget.classList.add("active-link");
             document.getElementById(tabName).classList.add("active-tab");
         }
+
+        // Mobile menu
+        const hamburger = document.getElementById("hamburger");
+        const navMenu = document.getElementById("navMenu");
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+        navMenu.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
+            });
+        });
+
+        // Navbar scroll state + active link highlighting
+        const navbar = document.getElementById("navbar");
+        const sections = document.querySelectorAll("section, #header");
+        const navLinks = navMenu.querySelectorAll("a");
+
+        window.addEventListener("scroll", () => {
+            navbar.classList.toggle("scrolled", window.scrollY > 30);
+
+            let current = "";
+            sections.forEach(sec => {
+                const top = sec.offsetTop - 140;
+                if (window.scrollY >= top) current = sec.getAttribute("id");
+            });
+            navLinks.forEach(link => {
+                link.classList.toggle("active", link.getAttribute("href") === "#" + current);
+            });
+        });
+
+        document.getElementById("year").textContent = new Date().getFullYear();
     </script>
+
     <script>
-        var sidemenu=document.getElementById("sidemenu");
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbygxbwD-JQyexs2C_MUkS-fE-e0UrlUDZQCH7XCyqIm6yR_GLcniBnX1O1FOfy7bEJT/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
 
-        function openmenu(){
-            sidemenu.style.right="0";
-        }
-         function closemenu(){
-            sidemenu.style.right="-200px";
-        }
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully ✓"
+                    setTimeout(function () { msg.innerHTML = "" }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
     </script>
-
-<script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbygxbwD-JQyexs2C_MUkS-fE-e0UrlUDZQCH7XCyqIm6yR_GLcniBnX1O1FOfy7bEJT/exec'
-  const form = document.forms['submit-to-google-sheet']
-  const msg =document.getElementById("msg")
-
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => {
-        msg.innerHTML="Message sent successfully"
-        setTimeout(function(){
-            msg.innerHTML=""
-        },5000)
-        form.reset()
-      })
-      .catch(error => console.error('Error!', error.message))
-  })
-</script>
 </body>
 </html>
