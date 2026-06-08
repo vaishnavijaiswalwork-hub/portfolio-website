@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="author" content="vaishnavi jaiswal">
+    <title> Vaishnavi Jiaswal Portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- HEADER SECTION -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo4.png" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-text">
+                <p>AI / Prompt Engineer &amp; UI/UX Designer</p>
+                <h1>Hi, I am <span>Vaishnavi</span><br>Jaiswal from India</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <div class="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="image.jpeg" class="my-image">
+                </div>
+
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        I'm a developer and designer who builds practical AI applications —
+                        RAG pipelines, autonomous agents, and conversational systems with
+                        persistent memory — and pairs them with clean, user-centered UI/UX
+                        and brand design. I've worked as an embedded forward-deployed engineer
+                        on a live product (PressHop), bridging client needs with both design
+                        and technical execution. Currently pursuing my B.Tech in Computer Science.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>AI / Prompt Engineering</span> — OpenAI &amp; Gemini APIs, Ollama, RAG (Qdrant), LangGraph/LangChain, FastAPI, agent &amp; memory systems (mem0, Neo4j, MongoDB)</li>
+                            <li><span>Programming</span> — Python, HTML, CSS &amp; JavaScript (React basics), C basics</li>
+                            <li><span>Design</span> — Figma, Canva, Photoshop, branding, typography &amp; color theory</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2026-29</span><br>B.Tech, Computer Science - Uttranchal University, Dehradun</li>
+                            <li><span>2024-25</span><br>Class 12 - Lucknow Public School (81.2%)</li>
+                            <li><span>2022-23</span><br>Class 10 - Lucknow Public School (87.8%)</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PORTFOLIO SECTION -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <div class="work-visual visual-rag"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                    <div class="layer">
+                        <h3>RAG Document Q&amp;A Pipeline</h3>
+                        <p>Built a retrieval-augmented generation pipeline that ingests PDFs,
+                            chunks them, generates OpenAI embeddings, and stores/retrieves them
+                            via a Qdrant vector database to answer questions grounded in document content.
+                            <br><em>Python · LangChain · OpenAI · Qdrant</em></p>
+                    </div>
+                </div>
+                <div class="work">
+                    <div class="work-visual visual-agent"><i class="fa-solid fa-robot"></i></div>
+                    <div class="layer">
+                        <h3>Tool-Calling AI Agent</h3>
+                        <p>Designed an agent that follows a start → plan → action → observe loop —
+                            selecting and executing tools (live weather, calculations) and returning
+                            grounded answers with strict structured JSON output.
+                            <br><em>Python · OpenAI · Pydantic</em></p>
+                    </div>
+                </div>
+                <div class="work">
+                    <div class="work-visual visual-memory"><i class="fa-solid fa-brain"></i></div>
+                    <div class="layer">
+                        <h3>Memory-Aware Chatbot</h3>
+                        <p>Built a conversational assistant that remembers facts across sessions
+                            using mem0 for memory, Neo4j as a graph store, and Qdrant for vector
+                            search — enabling personalized, context-aware replies.
+                            <br><em>mem0 · Neo4j · Qdrant · OpenAI</em></p>
+                    </div>
+                </div>
+                <div class="work">
+                    <div class="work-visual visual-graph"><i class="fa-solid fa-diagram-project"></i></div>
+                    <div class="layer">
+                        <h3>Stateful Chatbot with LangGraph</h3>
+                        <p>Built graph-based conversational agents with query-routing logic
+                            (structured outputs classify coding vs. general questions) and
+                            persistent conversation state via MongoDB checkpointing.
+                            <br><em>LangGraph · LangChain · MongoDB</em></p>
+                    </div>
+                </div>
+                <div class="work">
+                    <div class="work-visual visual-dashboard"><i class="fa-solid fa-chalkboard-user"></i></div>
+                    <div class="layer">
+                        <h3>ITBD University — Dashboard UI/UX</h3>
+                        <p>Designed a full learning-platform dashboard: sidebar navigation,
+                            course cards, progress tracking, leaderboard, and an embedded
+                            AI chat assistant widget — focused on clarity and a friendly visual style.
+                            <br><em>Figma · UI/UX Design</em></p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="presshop-preview.png">
+                    <div class="layer">
+                        <h3>PressHop — Forward Deployed Engineering</h3>
+                        <p>Worked as an embedded UI/UX designer &amp; forward deployed engineer
+                            on PressHop (a people-powered news platform, 55K+ users) — gathering
+                            requirements, designing visual assets, and bridging design-to-dev handoff.
+                            <br><em>Figma · Canva · Difmo Pvt. Ltd.</em></p>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/vaishnavijaiswalwork-hub" target="_blank" class="btn">See More on GitHub</a>
+        </div>
+    </div>
+
+    <!-- EXPERIENCE SECTION -->
+    <div id="experience">
+        <div class="container">
+            <h1 class="sub-title">Experience</h1>
+            <div class="experience-item">
+                <h3>UI/UX Designer &amp; Forward Deployed Engineer — Difmo Pvt. Ltd. <span>(PressHop project)</span></h3>
+                <p class="experience-date">February 2026 – March 2026</p>
+                <ul>
+                    <li>Embedded, client-facing role on PressHop — a people-powered news content platform (55K+ users across the UK, USA &amp; India) — bridging the client's product needs with design and technical execution.</li>
+                    <li>Gathered requirements directly from the client/product team and translated them into design specs and technical tasks through continuous feedback loops.</li>
+                    <li>Configured, integrated, and supported the product on the ground — hands-on technical troubleshooting, bug triage, and build testing.</li>
+                    <li>Bridged design-to-dev handoff, working with developers to ship Figma/Canva designs faithfully into the live product.</li>
+                    <li>Designed supporting visual assets — app screens, onboarding/marketing creatives, and branding elements.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-envelope"></i> vaishnavijaiswal.work@gmail.com</p>
+                    <p><i class="fas fa-phone"></i>+91 8353945347</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/vaishnavijaiswalwork-hub" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/vaishnavi-jaiswal-98956b3a7" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/vaishnavij266" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <a href="VAISHNAVI-resume.pdf" download class="btn btn2">Download CV</a>
+                </div>
+
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>© Vaishnavi Jaiswal</p>
+        </div>
+    </div>
+
+    <script>
+        let tabLinks = document.getElementsByClassName("tab-links");
+        let tabContents = document.getElementsByClassName("tab-contents");
+
+        function openTab(tabName) {
+            for (let tabLink of tabLinks) {
+                tabLink.classList.remove("active-link");
+            }
+            for (let tabContent of tabContents) {
+                tabContent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabName).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu=document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+         function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+    </script>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbygxbwD-JQyexs2C_MUkS-fE-e0UrlUDZQCH7XCyqIm6yR_GLcniBnX1O1FOfy7bEJT/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg =document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML="Message sent successfully"
+        setTimeout(function(){
+            msg.innerHTML=""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+</body>
+</html>
